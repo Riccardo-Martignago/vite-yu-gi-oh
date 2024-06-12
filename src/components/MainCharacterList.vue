@@ -21,7 +21,7 @@ export default {
     </p>
     <ul>
       <li v-for="character in characters" :key="character.id">
-        <img :src="character.card_images.image_url_small" :alt="character.name">
+        <img :src="character.card_images[0].image_url_small" :alt="character.name">
         {{ character.name }}
       </li>
     </ul>
