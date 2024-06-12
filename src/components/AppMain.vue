@@ -1,12 +1,31 @@
 <script>
 import MainCharacterList from './MainCharacterList.vue';
+import axios from 'axios';
 export default {
   components:{
     MainCharacterList
   },
   data() {
     return {
+      characters: [],
     }
+  },
+  methods:{
+    getCharacters(){
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+  .then((response) => {
+    console.log(response.data.data);
+    this.characters = response.data.data
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+  });
+    }
+  },
+  created(){
+    this.getCharacters();
   }
 }
 </script>
@@ -16,9 +35,8 @@ export default {
     <div class="container">
       <button>Alien</button>
       <div>
-        <MainCharacterList />
+        <MainCharacterList :characters="characters" />
       </div>
-      <h1>MAIN!</h1>
     </div>
   </main>
 </template>
