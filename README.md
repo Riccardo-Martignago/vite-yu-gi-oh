@@ -10,6 +10,6 @@ Bonus:
 ||PROCEDURA||
 
 Inizializzo il progetto creando un scaffolding di base con vite e vue
-Creo un astruttura base per il layout
+Creo una struttura base per il layout
 Creo una chiamata ajax nella sezione main
 Creo una sezione dove faró stampare la carta con relativi dati

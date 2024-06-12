@@ -1,5 +1,9 @@
 <script>
+import MainCharacterList from './MainCharacterList.vue';
 export default {
+  components:{
+    MainCharacterList
+  },
   data() {
     return {
     }
@@ -12,7 +16,7 @@ export default {
     <div class="container">
       <button>Alien</button>
       <div>
-        card
+        <MainCharacterList />
       </div>
       <h1>MAIN!</h1>
     </div>
@@ -29,5 +33,9 @@ main{
   div{
     background-color: white;
   }
+}
+button{
+  padding: .3rem .5rem;
+  margin: 1rem;
 }
 </style>
